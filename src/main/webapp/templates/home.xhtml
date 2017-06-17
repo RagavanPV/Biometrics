@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<head>
+<meta charset="UTF-8" />
+<title>RibioWeb Admin Console</title>
+<link href="#{request.contextPath}/css/home.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="page">
+
+		<div id="header">
+			<ui:insert name="header">
+				<ui:include src="/templates/common/header.xhtml" />
+			</ui:insert>
+		</div>
+		<div id="menu">
+			<ui:insert name="menu">
+				<ui:include src="/templates/common/menu.xhtml" />
+			</ui:insert>
+		</div>
+		<div id="content">
+			<ui:insert name="content">
+				<h:outputText value="Content area here!."></h:outputText>
+			</ui:insert>
+		</div>
+
+		<div id="footer">
+			<ui:insert name="footer">
+				<ui:include src="/templates/common/footer.xhtml" />
+			</ui:insert>
+		</div>
+
+	</div>
+
+</body>
+</html>
