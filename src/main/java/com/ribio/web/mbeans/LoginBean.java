@@ -1,7 +1,6 @@
 package com.ribio.web.mbeans;
 
 import javax.faces.context.FacesContext;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -43,8 +42,8 @@ public class LoginBean {
 			if (e.getPassword().equals(getPassword())) {
 				System.out.println(e.getPassword() + " " + getPassword());
 				FacesContext context = FacesContext.getCurrentInstance();
-				HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
-				session.setAttribute("employee", e);
+				/*HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
+				session.setAttribute("employee", e);*/
 				return "dashboard?faces-redirect=true";
 			}
 		}

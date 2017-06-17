@@ -13,13 +13,42 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-import lombok.Data;
-
-@Data
 @Entity
 @Table(name = "department_team_employees", uniqueConstraints = {
 		@UniqueConstraint(columnNames = { "DEPARTMENT_TEAM_ID", "EMPLOYEE_ID" }) })
 public class DepartmentTeamEmployee implements Serializable {
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public DepartmentTeam getDepartmentTeam() {
+		return departmentTeam;
+	}
+
+	public void setDepartmentTeam(DepartmentTeam departmentTeam) {
+		this.departmentTeam = departmentTeam;
+	}
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
